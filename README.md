@@ -2,9 +2,9 @@
 
 Học kỳ 3, Năm học: 2025-2026
 
-**Họ tên**: ...
+**Họ tên**: Trần Vũ Hùng
 
-**MSSV**: ...
+**MSSV**: DC25V7K010
 
-**Lớp HP**: CT275DC01.
+**Lớp HP**: CT275DC01.\
 
