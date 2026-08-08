@@ -1,57 +1,238 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
-			<a href="#">Trang chủ</a>
-			<a href="#">Dịch vụ</a>
-			<a href="#">Về chúng tôi</a>
-			<a href="#">FAQ</a>
-			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<h2>FAQ</h2>
-		<hr />
-		<div>
-			<p>1. Tôi có thể trả tiền thông qua PayPal?</p>
-			<p>Được. Chúng tôi chấp nhận việc chi trả qua PayPal.</p>
-		</div>
-		<div>
-			<p>2. Tôi có thể hủy bỏ đặt hàng?</p>
-			<p>Được. Bạn có thể hủy bỏ đặt hàng bất khi nào bạn muốn.</p>
-		</div>
-		<div>
-			<p>3. Chính sách hoàn tiền như thế nào?</p>
-			<p>
-				Bạn có thể nhận được tiền hoàn trả 100% bất kể khi nào và vì bất kỳ lý
-				do gì.
-			</p>
-		</div>
-		<div>
-			<p>4. Làm thế nào để tôi có thể nhận được hóa đơn?</p>
-			<p>Bạn có thể nhận được hóa đơn thông qua email hoặc thư tín.</p>
-		</div>
-		<hr />
-		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1080px;
+            margin: 8px auto;
+            padding: 25px 30px;
+            border: 1px solid red;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: white;
+        }
+
+        h1 {
+            display: inline-block;
+            width: 50%;
+            height: 160px;
+            margin: 0;
+            vertical-align: top;
+        }
+
+        h1 img {
+            width: 255px;
+            margin-top: 20px;
+        }
+
+        body > div:first-of-type {
+            display: inline-block;
+            width: 49%;
+            text-align: right;
+            vertical-align: top;
+            margin-top: 2px;
+            white-space: nowrap;
+        }
+
+        body > div:first-of-type a {
+            display: inline-block;
+            padding: 11px 15px;
+            background-color: #075b91;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-right: 1px solid #164d70;
+        }
+
+        body > div:first-of-type a:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+
+        body > div:first-of-type a:last-child {
+            border-radius: 0 5px 5px 0;
+            border-right: none;
+        }
+
+        body > div:first-of-type a:hover {
+            background-color: #064b77;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e5e5;
+            margin: 20px 0 25px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0 0 20px;
+            color: #222;
+        }
+
+        h2 + hr {
+            margin: 0 0 25px;
+        }
+
+        body > div:nth-of-type(2),
+        body > div:nth-of-type(3),
+        body > div:nth-of-type(4),
+        body > div:nth-of-type(5) {
+            width: 100%;
+            margin-bottom: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        body > div:nth-of-type(2) > p,
+        body > div:nth-of-type(3) > p,
+        body > div:nth-of-type(4) > p,
+        body > div:nth-of-type(5) > p {
+            margin: 0;
+            padding: 11px 18px;
+            font-size: 18px;
+            background-color: #f4f4f4;
+        }
+
+        body > div:nth-of-type(2) > p:first-child,
+        body > div:nth-of-type(3) > p:first-child,
+        body > div:nth-of-type(4) > p:first-child,
+        body > div:nth-of-type(5) > p:first-child {
+            border-bottom: 1px solid #ddd;
+        }
+
+        body > div:nth-of-type(2) > p:nth-child(2),
+        body > div:nth-of-type(3) > p:nth-child(2),
+        body > div:nth-of-type(4) > p:nth-child(2),
+        body > div:nth-of-type(5) > p:nth-child(2) {
+            background-color: white;
+            padding: 20px 18px;
+        }
+
+        body > div:nth-of-type(3) > p:nth-child(2),
+        body > div:nth-of-type(4) > p:nth-child(2),
+        body > div:nth-of-type(5) > p:nth-child(2) {
+            display: none;
+        }
+
+        body > div:nth-of-type(5) {
+            margin-bottom: 0;
+        }
+
+        body > div:nth-of-type(5) + hr {
+            margin-top: 48px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            width: 100%;
+            min-height: 50px;
+        }
+
+        footer > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+            color: #444;
+        }
+
+        footer ul {
+            display: flex;
+            list-style: none;
+            gap: 38px;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer ul li a {
+            color: #4b9bd1;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        <img src="img/logo.jpg">
+    </h1>
+
+    <div>
+        	<a href="index.html">Trang chủ</a>
+            <a href="service.html">Dịch vụ</a>
+            <a href="about.html">Về chúng tôi</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Liên hệ</a>
+    </div>
+
+    <hr>
+
+    <h2>FAQ</h2>
+
+    <hr>
+
+    <div>
+        <p>1. Tôi có thể trả tiền thông qua PayPal?</p>
+        <p>Được. Chúng tôi chấp nhận việc chi trả qua PayPal.</p>
+    </div>
+
+    <div>
+        <p>2. Tôi có thể hủy bỏ đặt hàng?</p>
+        <p>Được. Bạn có thể hủy bỏ đặt hàng bất khi nào bạn muốn.</p>
+    </div>
+
+    <div>
+        <p>3. Chính sách hoàn tiền như thế nào?</p>
+        <p>
+            Bạn có thể nhận được tiền hoàn trả 100% bất kể khi nào và vì bất kỳ lý do gì.
+        </p>
+    </div>
+
+    <div>
+        <p>4. Làm thế nào để tôi có thể nhận được hóa đơn?</p>
+        <p>
+            Bạn có thể nhận được hóa đơn thông qua email hoặc thư tín.
+        </p>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div>
+            <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
+
+            <ul>
+                   <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="service.html">Dịch vụ</a></li>
+                <li><a href="about.html">Về chúng tôi</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
 </html>

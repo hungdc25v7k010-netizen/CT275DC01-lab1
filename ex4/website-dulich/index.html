@@ -1,88 +1,287 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
-			<a href="#">Trang chủ</a>
-			<a href="#">Dịch vụ</a>
-			<a href="#">Về chúng tôi</a>
-			<a href="#">FAQ</a>
-			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<div>
-			<div>
-				<img
-					alt="First slide"
-					src="img/1.jpg"
-				/>
-			</div>
-			<div>
-				<img
-					alt="Second slide"
-					src="img/2.jpg"
-				/>
-			</div>
-			<div>
-				<img
-					alt="Third slide"
-					src="img/3.jpg"
-				/>
-			</div>
-		</div>
-		<div>
-			<img src="img/11.jpg" />
-			<h4>Điểm du lịch 1</h4>
-			<p>
-				Đây là địa điểm du lịch 1, chi tiết về điểm du lịch này các bạn có thể
-				có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
-				email.
-			</p>
-		</div>
-		<div>
-			<img src="img/12.jpg" />
-			<h4>Điểm du lịch 2</h4>
-			<p>
-				Đây là địa điểm du lịch 2, chi tiết về điểm du lịch này các bạn có thể
-				có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
-				email.
-			</p>
-		</div>
-		<div>
-			<img src="img/13.jpg" />
-			<h4>Điểm du lịch 3</h4>
-			<p>
-				Đây là địa điểm du lịch 3, chi tiết về điểm du lịch này các bạn có thể
-				có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
-				email.
-			</p>
-		</div>
-		<div>
-			<h4>Hãy liên hệ với chúng tôi!</h4>
-			<p>Chúng tôi mong muốn lắng nghe từ bạn.</p>
-			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công ty Du lịch Bụi</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 900px;
+            margin: 20px auto;
+            padding: 10px 25px;
+            border: 4px solid #c000ff;
+            font-family: Arial, sans-serif;
+            color: #555;
+            background-color: white;
+        }
+
+        header {
+            height: 110px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        header h1 img {
+            width: 190px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            margin-top: 0;
+            display: flex;
+        }
+
+        nav a {
+            display: block;
+            padding: 9px 13px;
+            background-color: #0878d1;
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            border-right: 1px solid #4b9ee0;
+        }
+
+        nav a:first-child {
+            border-radius: 3px 0 0 3px;
+        }
+
+        nav a:last-child {
+            border-radius: 0 3px 3px 0;
+            border-right: none;
+        }
+
+        nav a:hover {
+            background-color: #005fa8;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 12px 0 15px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 340px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner div {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner div:first-child {
+            display: block;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .tour-list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 0 45px;
+        }
+
+        .tour {
+            width: 30%;
+            text-align: center;
+        }
+
+        .tour img {
+            width: 165px;
+            height: 120px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .tour h4 {
+            margin: 3px 0 7px;
+            font-size: 21px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .tour p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .contact {
+            display: none;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 45px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: #777;
+        }
+
+        footer ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin: 0;
+        }
+
+        footer ul li a {
+            color: #5ca9e8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            <img src="img/logo.jpg" alt="Logo">
+        </h1>
+
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="service.html">Dịch vụ</a>
+            <a href="about.html">Về chúng tôi</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Liên hệ</a>
+        </nav>
+
+    </header>
+
+    <hr>
+
+    <section class="banner">
+
+        <div>
+            <img src="img/1.jpg" alt="First slide">
+        </div>
+
+        <div>
+            <img src="img/2.jpg" alt="Second slide">
+        </div>
+
+        <div>
+            <img src="img/3.jpg" alt="Third slide">
+        </div>
+
+    </section>
+
+    <section class="tour-list">
+
+        <div class="tour">
+
+            <img src="img/11.jpg" alt="Điểm du lịch 1">
+
+            <h4>Điểm du lịch 1</h4>
+
+            <p>
+                Đây là địa điểm du lịch 1, chi tiết về điểm du lịch này các bạn có thể
+                có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
+                email.
+            </p>
+
+        </div>
+
+        <div class="tour">
+
+            <img src="img/12.jpg" alt="Điểm du lịch 2">
+
+            <h4>Điểm du lịch 2</h4>
+
+            <p>
+                Đây là địa điểm du lịch 2, chi tiết về điểm du lịch này các bạn có thể
+                có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
+                email.
+            </p>
+
+        </div>
+
+        <div class="tour">
+
+            <img src="img/13.jpg" alt="Điểm du lịch 3">
+
+            <h4>Điểm du lịch 3</h4>
+
+            <p>
+                Đây là địa điểm du lịch 3, chi tiết về điểm du lịch này các bạn có thể
+                có được bằng cách liên lạc với chúng tôi trực tiếp qua điện thoại hoặc
+                email.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="contact">
+
+        <h4>Hãy liên hệ với chúng tôi!</h4>
+
+        <p>Chúng tôi mong muốn lắng nghe từ bạn.</p>
+
+        <a href="#">Liên hệ</a>
+
+    </section>
+
+    <hr>
+
+    <footer>
+
+        <p>
+            © Bản quyền thuộc về Công ty Du lịch Bụi.
+        </p>
+
+        <ul>
+             <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="service.html">Dịch vụ</a></li>
+                <li><a href="about.html">Về chúng tôi</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+
+    </footer>
+
+</body>
+
 </html>

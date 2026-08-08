@@ -1,71 +1,298 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<title>Grid Template for Bootstrap</title>
-	</head>
+<html lang="vi">
 
-	<body>
-		<h1><img src="img/logo.jpg" /></h1>
-		<div>
-			<a href="#">Trang chủ</a>
-			<a href="#">Dịch vụ</a>
-			<a href="#">Về chúng tôi</a>
-			<a href="#">FAQ</a>
-			<a href="#">Liên hệ</a>
-		</div>
-		<hr />
-		<h2 style="margin: 0"><b>Các dịch vụ</b></h2>
-		<hr />
-		<div>
-			<p>Thành phố</p>
-			<div>
-				<p>19.999.999 VNĐ</p>
-				<p>Bao gồm mọi chi phí</p>
-				<p>1 Hướng dẫn viên</p>
-				<p>Phòng VIP</p>
-				<p>Giảm giá 50%</p>
-				<a href="#">Đăng ký ngay</a>
-			</div>
-		</div>
-		<div>
-			<p>Bãi biển</p>
-			<div>
-				<p>19.999.999 VNĐ</p>
-				<p>Bao gồm mọi chi phí</p>
-				<p>1 Hướng dẫn viên</p>
-				<p>Phòng VIP</p>
-				<p>Thức ăn miễn phí</p>
-				<a href="#">Đăng ký ngay</a>
-			</div>
-		</div>
-		<div>
-			<p>Tiết kiệm</p>
-			<div>
-				<p>9.999.999 VNĐ</p>
-				<p>Bao gồm mọi chi phí</p>
-				<p>1 Hướng dẫn viên</p>
-				<p>Phòng bình dân</p>
-				<p>Giảm giá thức ăn 10%</p>
-				<a href="#">Đăng ký ngay</a>
-			</div>
-		</div>
-		<hr />
-		<footer>
-			<div>
-				<p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
-				<ul>
-					<li><a href="#">Trang chủ</a></li>
-					<li><a href="#">Dịch vụ</a></li>
-					<li><a href="#">Về chúng tôi</a></li>
-					<li><a href="#">FAQ</a></li>
-					<li><a href="#">Liên hệ</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các dịch vụ</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1080px;
+            margin: 8px auto;
+            padding: 25px 30px;
+            border: 1px solid red;
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: white;
+        }
+
+        h1 {
+            display: inline-block;
+            width: 50%;
+            height: 160px;
+            margin: 0;
+            vertical-align: top;
+        }
+
+        h1 img {
+            width: 255px;
+            margin-top: 20px;
+        }
+
+        body > div:first-of-type {
+            display: inline-block;
+            width: 49%;
+            text-align: right;
+            vertical-align: top;
+            margin-top: 2px;
+            white-space: nowrap;
+        }
+
+        body > div:first-of-type a {
+            display: inline-block;
+            padding: 11px 15px;
+            background-color: #075b91;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-right: 1px solid #164d70;
+        }
+
+        body > div:first-of-type a:first-child {
+            border-radius: 5px 0 0 5px;
+        }
+
+        body > div:first-of-type a:last-child {
+            border-radius: 0 5px 5px 0;
+            border-right: none;
+        }
+
+        body > div:first-of-type a:hover {
+            background-color: #064b77;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e5e5;
+            margin: 20px 0 25px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+            padding: 0 0 20px;
+            color: #222;
+        }
+
+        h2 + hr {
+            margin: 0 0 22px;
+        }
+
+        body > div:nth-of-type(2),
+        body > div:nth-of-type(3),
+        body > div:nth-of-type(4) {
+            display: inline-block;
+            width: 31.9%;
+            vertical-align: top;
+            margin-right: 1.7%;
+            text-align: center;
+        }
+
+        body > div:nth-of-type(4) {
+            margin-right: 0;
+        }
+
+        body > div:nth-of-type(2) > p,
+        body > div:nth-of-type(3) > p,
+        body > div:nth-of-type(4) > p {
+            height: 25px;
+            line-height: 25px;
+            margin: 0 0 20px;
+            border: 1px solid #d5e8c8;
+            border-radius: 4px;
+            color: #555;
+            font-size: 16px;
+        }
+
+        body > div:nth-of-type(2) > div,
+        body > div:nth-of-type(3) > div,
+        body > div:nth-of-type(4) > div {
+            height: 317px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        body > div:nth-of-type(2) > div > p:first-child,
+        body > div:nth-of-type(3) > div > p:first-child,
+        body > div:nth-of-type(4) > div > p:first-child {
+            margin: 0;
+            height: 43px;
+            line-height: 43px;
+            background-color: #f4f4f4;
+            border-bottom: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        body > div:nth-of-type(2) > div > p:not(:first-child),
+        body > div:nth-of-type(3) > div > p:not(:first-child),
+        body > div:nth-of-type(4) > div > p:not(:first-child) {
+            margin: 0;
+            height: 52px;
+            line-height: 52px;
+            font-size: 16px;
+        }
+
+        body > div:nth-of-type(2) > div > a,
+        body > div:nth-of-type(3) > div > a,
+        body > div:nth-of-type(4) > div > a {
+            display: inline-block;
+            padding: 8px 14px;
+            margin-top: 2px;
+            background-color: #075b91;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        body > div:nth-of-type(2) > div > a:hover,
+        body > div:nth-of-type(3) > div > a:hover,
+        body > div:nth-of-type(4) > div > a:hover {
+            background-color: #064b77;
+        }
+
+        body > div:nth-of-type(4) > div {
+            height: 317px;
+        }
+
+        body > div:nth-of-type(4) > div > p:not(:first-child) {
+            height: 52px;
+        }
+
+        body > div:nth-of-type(4) > div > a {
+            margin-top: 2px;
+        }
+
+        body > div:nth-of-type(4) {
+            margin-bottom: 0;
+        }
+
+        body > div:nth-of-type(4) + hr {
+            margin-top: 43px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            width: 100%;
+            min-height: 50px;
+        }
+
+        footer > div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+            color: #444;
+        }
+
+        footer ul {
+            display: flex;
+            list-style: none;
+            gap: 38px;
+            margin: 0;
+            padding: 0;
+        }
+
+        footer ul li a {
+            color: #4b9bd1;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>
+        <img src="img/logo.jpg">
+    </h1>
+
+    <div>
+        	<a href="index.html">Trang chủ</a>
+            <a href="service.html">Dịch vụ</a>
+            <a href="about.html">Về chúng tôi</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Liên hệ</a>
+    </div>
+
+    <hr>
+
+    <h2>Các dịch vụ</h2>
+
+    <hr>
+
+    <div>
+        <p>Thành phố</p>
+
+        <div>
+            <p>19.999.999 VNĐ</p>
+            <p>Bao gồm mọi chi phí</p>
+            <p>1 Hướng dẫn viên</p>
+            <p>Phòng VIP</p>
+            <p>Giảm giá 50%</p>
+            <a href="#">Đăng ký ngay</a>
+        </div>
+    </div>
+
+    <div>
+        <p>Bãi biển</p>
+
+        <div>
+            <p>19.999.999 VNĐ</p>
+            <p>Bao gồm mọi chi phí</p>
+            <p>1 Hướng dẫn viên</p>
+            <p>Phòng VIP</p>
+            <p>Thức ăn miễn phí</p>
+            <a href="#">Đăng ký ngay</a>
+        </div>
+    </div>
+
+    <div>
+        <p>Tiết kiệm</p>
+
+        <div>
+            <p>9.999.999 VNĐ</p>
+            <p>Bao gồm mọi chi phí</p>
+            <p>1 Hướng dẫn viên</p>
+            <p>Phòng bình dân</p>
+            <p>Giảm giá thức ăn 10%</p>
+            <a href="#">Đăng ký ngay</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <div>
+            <p>© Bản quyền thuộc về Công ty Du lịch Bụi.</p>
+
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="service.html">Dịch vụ</a></li>
+                <li><a href="about.html">Về chúng tôi</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
 </html>
